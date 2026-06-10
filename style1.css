@@ -1,135 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;900&display=swap');
-
 body {
-    background-color: #1c0430;
-    font-family: 'Inter', sans-serif;
+    background-color: #3d003d;
     color: #ffffff;
-    margin: 0;
-    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.header-section {
-    background-color: #110122;
-    border-top: 6px solid #00ff66;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.pl-logo {
-    height: 42px;
-    width: auto;
-}
-
-.nav-link {
-    color: #ffffff;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.nav-link:hover, .nav-link.active {
-    color: #00ff66;
-}
-
-.btn-explore {
-    background-color: #00ff66;
-    color: #1c0430;
-    font-family: 'Inter', sans-serif;
-    font-weight: 900;
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
-    border: none;
-    border-radius: 4px !important;
-    padding: 8px 20px;
-}
-
-.btn-explore:hover {
-    background-color: #ffffff;
-    color: #1c0430;
-}
-
-.header-title {
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 3.5rem;
-    line-height: 1.05;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    margin-bottom: 30px;
-}
-
-.text-purple-light {
-    color: #ffffff;
-    display: block;
-}
-
-.img-card {
-    border-radius: 0px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.img-card img {
-    width: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.macro-img {
-    height: 350px;
-}
-
-.collage-img {
-    height: 350px;
-}
-
-.table-container {
-    background-color: #110122;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 25px !important;
-}
-
-.table-container h3 {
-    font-family: 'Archivo Black', sans-serif;
-    color: #ffffff;
-    font-size: 1.5rem;
-    text-align: left !important;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+.custom-navbar {
+    background-color: #3d003d;
+    padding-top: 15px;
     padding-bottom: 15px;
 }
 
-.klasemen-table th {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.7rem;
-    font-weight: 900;
-    letter-spacing: 0.5px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 12px;
+.green-bar {
+    background-color: #00ff87;
+    height: 35px;
+    width: 100%;
 }
 
-.klasemen-table tbody tr {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.klasemen-table td {
-    padding: 15px 5px;
-    font-size: 0.85rem;
-    color: #ffffff;
-    font-weight: 600;
-}
-
-.num-badge {
-    display: inline-block;
-    font-weight: 900;
-    margin-right: 10px;
-    color: #00ff66;
-}
-
-.rank-1 {
-    background-color: rgba(0, 255, 102, 0.05);
-}
-
-.rank-1 td {
-    color: #00ff66;
+.main-title {
+    font-size: 3rem;
     font-weight: 700;
+    line-height: 1.2;
+}
+
+.btn-explore {
+    background-color: #00ff87;
+    color: #3d003d;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 10px 25px;
+    border: none;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-explore:hover {
+    background-color: #02d171;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.trophy-img-container {
+    max-width: 80%;
+}
+
+.collage-container img {
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    object-fit: cover;
+}
+
+.table-container {
+    background-color: #ffffff;
+    color: #3d003d;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.table-title {
+    font-weight: 800;
+    color: #3d003d;
+}
+
+.custom-table thead {
+    border-bottom: 2px solid #3d003d;
+}
+
+.custom-table th {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #572057;
+}
+
+.custom-table tbody tr {
+    border-bottom: 1px solid #f0e6f0;
+}
+
+.custom-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.custom-table td {
+    font-size: 0.85rem;
+    padding: 12px 8px;
+}
+
+.custom-table i {
+    font-size: 1.1rem;
 }
