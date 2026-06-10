@@ -2,6 +2,7 @@ body {
     background-color: #3d003d;
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
 }
 
 .custom-navbar {
@@ -29,7 +30,14 @@ body {
     border-radius: 30px;
     padding: 10px 25px;
     border: none;
+    transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-explore:hover {
+    background-color: #02d171;
+    color: #ffffff;
+    transform: scale(1.05);
 }
 
 .section-label {
@@ -83,15 +91,29 @@ body {
     color: rgba(61, 0, 61, 0.7);
     font-weight: 600;
     font-style: italic;
+    margin: 0;
 }
 
-.side-image-container {
+.visual-item-trophy {
     width: 100%;
-    max-width: 550px;
+    max-width: 180px;
+    margin-left: 20px;
 }
 
-.image-fit {
+.visual-item-collage {
+    width: 100%;
+    max-width: 580px;
+}
+
+.image-fit-trophy {
     height: 230px;
-    object-fit: cover;
+    object-fit: contain;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(0,0,0,0.2);
+}
+
+.image-fit-collage {
+    height: auto;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.1);
 }
