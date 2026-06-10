@@ -1,114 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;900&display=swap');
 
 body {
-    background-color: #0c001c;
-    font-family: 'Poppins', sans-serif;
+    background-color: #1c0430;
+    font-family: 'Inter', sans-serif;
     color: #ffffff;
+    margin: 0;
+    padding: 0;
 }
 
 .header-section {
-    background-color: #1a0036;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
+    background-color: #110122;
+    border-top: 6px solid #00ff66;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .pl-logo {
-    height: 40px;
+    height: 42px;
 }
 
 .nav-link {
-    color: #a29bfe;
-    font-weight: 600;
-    font-size: 0.9rem;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.85rem;
     letter-spacing: 1px;
-    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .nav-link:hover, .nav-link.active {
-    color: #00ffcc;
-    text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+    color: #00ff66;
 }
 
 .btn-explore {
-    background: linear-gradient(135deg, #00ffcc, #00bfff);
-    color: #0c001c;
-    font-weight: 700;
+    background-color: #00ff66;
+    color: #1c0430;
+    font-weight: 900;
     border: none;
-    box-shadow: 0 4px 15px rgba(0, 255, 204, 0.3);
+    border-radius: 4px !important;
 }
 
 .header-title {
-    font-size: 3.8rem;
-    font-weight: 800;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 3.5rem;
+    text-transform: uppercase;
     letter-spacing: -1px;
 }
 
 .text-muted-purple {
-    color: #a29bfe;
-    font-size: 1.05rem;
-    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 .side-img {
     width: 100%;
-    height: 260px;
+    height: 250px;
     object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .expert-card {
-    background: linear-gradient(145deg, #15002e, #25004d);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    background-color: #110122;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 0px !important;
 }
 
 .bg-purple-accent {
-    background: rgba(255, 255, 255, 0.08);
-    color: #00ffcc;
-    border: 1px solid rgba(0, 255, 204, 0.2);
-    font-size: 0.8rem !important;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+    background-color: transparent;
+    color: #00ff66;
+    border: 1px solid #00ff66;
+    border-radius: 0px !important;
+    font-size: 0.75rem !important;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .page-number {
-    color: rgba(255, 255, 255, 0.2);
-    font-family: monospace;
+    color: rgba(255, 255, 255, 0.3);
+    font-family: 'Archivo Black', sans-serif;
     font-size: 2rem !important;
 }
 
 .text-gradient {
+    font-family: 'Archivo Black', sans-serif;
     font-size: 2.2rem;
-    font-weight: 700;
-    line-height: 1.25;
-    background: linear-gradient(to right, #ffffff, #d6cdff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 1.1;
 }
 
 .input-group-custom {
-    background-color: rgba(12, 0, 28, 0.7);
-    border-left: 4px solid #00ffcc;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+    background-color: #1c0430;
+    border-left: 4px solid #00ff66;
+    border-radius: 0px !important;
 }
 
 .text-cyan {
-    color: #00ffcc;
+    color: #00ff66;
     font-size: 0.95rem;
+    font-weight: 600;
 }
 
 .btn-ask {
-    background: linear-gradient(135deg, #00ffcc, #00bfff);
-    color: #0c001c;
+    background-color: #00ff66;
+    color: #1c0430;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
     border: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 255, 204, 0.2);
+    border-radius: 4px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .btn-ask:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 255, 204, 0.4);
-    color: #0c001c;
+    background-color: #ffffff;
+    color: #1c0430;
 }
