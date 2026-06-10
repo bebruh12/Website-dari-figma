@@ -1,152 +1,135 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;900&display=swap');
 
 body {
-    background-color: #0c001c;
-    font-family: 'Poppins', sans-serif;
+    background-color: #1c0430;
+    font-family: 'Inter', sans-serif;
     color: #ffffff;
-    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .header-section {
-    background-color: #1a0036;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
+    background-color: #110122;
+    border-top: 6px solid #00ff66;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .pl-logo {
-    height: 40px;
+    height: 42px;
     width: auto;
-    filter: drop-shadow(0 2px 8px rgba(0,245,212,0.3));
 }
 
 .nav-link {
-    color: #a29bfe;
-    font-weight: 600;
-    font-size: 0.9rem;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
     letter-spacing: 1px;
-    transition: all 0.3s ease;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .nav-link:hover, .nav-link.active {
-    color: #00ffcc;
-    text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+    color: #00ff66;
 }
 
 .btn-explore {
-    background: linear-gradient(135deg, #00ffcc, #00bfff);
-    color: #0c001c;
-    font-weight: 700;
+    background-color: #00ff66;
+    color: #1c0430;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
     font-size: 0.85rem;
     letter-spacing: 0.5px;
     border: none;
-    box-shadow: 0 4px 15px rgba(0, 255, 204, 0.3);
-    transition: all 0.3s ease;
+    border-radius: 4px !important;
+    padding: 8px 20px;
 }
 
 .btn-explore:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 255, 204, 0.5);
-    color: #0c001c;
+    background-color: #ffffff;
+    color: #1c0430;
 }
 
 .header-title {
-    font-size: 4rem;
-    font-weight: 800;
-    letter-spacing: -1px;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 3.5rem;
     line-height: 1.05;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
 }
 
 .text-purple-light {
-    background: linear-gradient(to right, #00ffcc, #00bfff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ffffff;
+    display: block;
 }
 
 .img-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-radius: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .img-card img {
     width: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.img-card:hover img {
-    transform: scale(1.03);
+    display: block;
 }
 
 .macro-img {
-    height: 380px;
+    height: 350px;
 }
 
 .collage-img {
-    height: 380px;
+    height: 350px;
 }
 
 .table-container {
-    background: rgba(26, 0, 54, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    background-color: #110122;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 25px !important;
 }
 
 .table-container h3 {
-    letter-spacing: 2px;
+    font-family: 'Archivo Black', sans-serif;
     color: #ffffff;
-    font-size: 1.25rem;
-}
-
-.klasemen-table th {
-    color: #a29bfe;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+    font-size: 1.5rem;
+    text-align: left !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 15px;
 }
 
-.klasemen-table tbody tr {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-    transition: all 0.2s ease;
+.klasemen-table th {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 12px;
 }
 
-.klasemen-table tbody tr:hover {
-    background: rgba(255, 255, 255, 0.03);
+.klasemen-table tbody tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .klasemen-table td {
-    padding: 16px 8px;
+    padding: 15px 5px;
     font-size: 0.85rem;
-    font-weight: 500;
+    color: #ffffff;
+    font-weight: 600;
 }
 
 .num-badge {
     display: inline-block;
-    width: 26px;
-    height: 26px;
-    line-height: 26px;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 6px;
-    margin-right: 8px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: #ffffff;
+    font-weight: 900;
+    margin-right: 10px;
+    color: #00ff66;
 }
 
 .rank-1 {
-    background: rgba(0, 255, 204, 0.04);
+    background-color: rgba(0, 255, 102, 0.05);
 }
 
 .rank-1 td {
-    color: #00ffcc;
-}
-
-.rank-1 .num-badge {
-    background: #00ffcc;
-    color: #0c001c;
+    color: #00ff66;
+    font-weight: 700;
 }
