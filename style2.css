@@ -40,6 +40,23 @@ body {
     transform: scale(1.05);
 }
 
+.btn-nav-login {
+    background-color: #00ff87;
+    color: #000000;
+    font-size: 0.85rem;
+    border-radius: 20px;
+    padding: 6px 22px;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.btn-nav-login:hover {
+    background-color: #02d171;
+    color: #ffffff;
+}
+
 .section-label {
     font-size: 1.6rem;
     font-weight: 700;
@@ -101,7 +118,6 @@ body {
 .visual-item-trophy {
     width: 100%;
     max-width: 100%;
-  
 }
 
 .visual-item-collage {
