@@ -51,24 +51,37 @@ userInput.addEventListener('keypress', function(e) {
 
 
 
-function menanganiLogin(event) {
-    event.preventDefault();
-
-    const usernameInput = document.querySelector('input[type="text"]');
-    const passwordInput = document.querySelector('input[type="password"]');
-
-    const username = usernameInput.value.trim();
-    const password = passwordInput.value.trim();
-
-    if (username === '' || password === '') {
-        alert('Waduh, email/username dan password jangan dikosongin ya!');
-        return;
-    }
-
-    alert(`GGMU / YNWA! Login Berhasil.\nSelamat datang kembali, ${username}! ⚽`);
+function jalankanAiEncyclopedia() {
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const loginForm = document.querySelector('form');
-    loginForm.addEventListener('submit', menanganiLogin);
+function jalankanLogin() {
+    const formLogin = document.querySelector('form');
+    const inputUser = document.getElementById('username');
+    const inputPass = document.getElementById('password');
+
+    if (!formLogin || !inputUser || !inputPass) return;
+
+    formLogin.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const username = inputUser.value.trim();
+        const password = inputPass.value.trim();
+
+        if (username === "" || password === "") {
+            alert("Email/Username dan Password tidak boleh kosong!");
+            return;
+        }
+
+        if (username === "admin" && password === "12345") {
+            alert("Login Berhasil! Selamat datang di Premier League Encyclopedia.");
+            window.location.href = "home.html"; 
+        } else {
+            alert("Username atau Password salah! (Tips: gunakan admin & 12345)");
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    jalankanAiEncyclopedia();
+    jalankanLogin();
 });
