@@ -2,7 +2,6 @@
     --pl-green: #00ff85;
     --pl-purple: #38003c;
     --outer-dark: #1a001e;
-    --link-blue: #0066cc;
 }
 
 body, html {
@@ -36,7 +35,8 @@ body, html {
     padding: 40px 35px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 30px;
     align-items: center;
 }
 
@@ -55,7 +55,6 @@ body, html {
 .logo-container {
     width: 100%;
     text-align: center;
-    margin: 20px 0;
 }
 
 .logo-placeholder {
@@ -96,10 +95,10 @@ body, html {
 .register-link {
     display: block;
     text-align: center;
-    color: var(--link-blue);
+    color: var(--pl-purple);
     text-decoration: none;
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 25px;
 }
 
@@ -109,8 +108,8 @@ body, html {
 
 .btn-login {
     width: 100%;
-    background-color: #ffffff;
-    color: var(--pl-purple);
+    background-color: var(--pl-purple);
+    color: #ffffff;
     border: none;
     padding: 12px 0;
     font-size: 1.1rem;
@@ -118,11 +117,11 @@ body, html {
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .btn-login:hover {
-    background-color: #f1f1f1;
+    background-color: #240026;
     transform: translateY(-1px);
 }
 
@@ -150,7 +149,8 @@ body, html {
     .main-container {
         height: auto;
     }
-    .stadium-panel {
-        height: 300px;
+    .login-panel {
+        padding: 30px 20px;
+        gap: 20px;
     }
 }
