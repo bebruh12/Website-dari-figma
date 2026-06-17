@@ -26,16 +26,21 @@ html, body {
 .top-badge {
     background-color: #240024;
     color: #ffffff;
-    padding: 6px 45px;
+    padding: 10px 0;
     border-radius: 8px;
     font-size: 0.9rem;
     font-weight: 600;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .logo-wrapper {
     width: 100%;
-    max-width: 260px;
+    max-width: 100%;
+    padding: 0 10px;
 }
+
 
 .logo-img {
     width: 100%;
