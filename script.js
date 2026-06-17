@@ -53,6 +53,9 @@ function jalankanAiEncyclopedia() {
     });
 }
 
+function jalankanAiEncyclopedia() {
+}
+
 function jalankanLogin() {
     const formLogin = document.querySelector('form');
     const inputUser = document.getElementById('username');
