@@ -6,84 +6,69 @@ const botBrain = {
     "format": "Premier League diikuti oleh 20 klub, di mana 3 klub terbawah di akhir musim akan terdegradasi ke EFL Championship."
 };
 
-function jalankanAiEncyclopedia() {
-    const btnSubmit = document.getElementById('btn-submit');
-    const userInput = document.getElementById('user-input');
-    const aiOutput = document.getElementById('ai-output');
+const btnSubmit = document.getElementById('btn-submit');
+const userInput = document.getElementById('user-input');
+const aiOutput = document.getElementById('ai-output');
 
-    if (!btnSubmit || !userInput || !aiOutput) return;
-
-    function prosesPertanyaan() {
-        const textTanya = userInput.value.toLowerCase().trim();
-        
-        if (textTanya === "") {
-            aiOutput.innerHTML = "Ketik sesuatu dulu dong di kotak pertanyaan...";
-            aiOutput.style.fontStyle = "italic";
-            return;
-        }
-
-        aiOutput.style.fontStyle = "normal";
-        aiOutput.style.color = "#3d003d";
-        aiOutput.innerHTML = "<em>Sedang menganalisis...</em>";
-
-        setTimeout(() => {
-            let jawabanKetemu = false;
-
-            for (let key in botBrain) {
-                if (textTanya.includes(key)) {
-                    aiOutput.innerText = botBrain[key];
-                    jawabanKetemu = true;
-                    break;
-                }
-            }
-
-            if (!jawabanKetemu) {
-                aiOutput.innerText = "Maaf, saya tidak menemukan informasi spesifik tentang itu. Coba ketik kata kunci seperti 'juara', 'top skor', atau 'piala'.";
-            }
-        }, 500);
-    }
-
-    btnSubmit.addEventListener('click', prosesPertanyaan);
-
-    userInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            e.preventDefault();
-            prosesPertanyaan();
-        }
-    });
-}
-
-function executeLogin(event) {
-    event.preventDefault(); 
+function prosesPertanyaan() {
+    const textTanya = userInput.value.toLowerCase().trim();
     
-    const usernameInput = document.getElementById('username').value.trim();
-    const passwordInput = document.getElementById('password').value;
-
-    if (validateAuthInput(usernameInput, passwordInput)) {
-        processAuthentication(usernameInput, passwordInput);
+    if (textTanya === "") {
+        aiOutput.innerHTML = "Ketik sesuatu dulu dong di kotak pertanyaan...";
+        aiOutput.style.fontStyle = "italic";
+        return;
     }
+
+    aiOutput.style.fontStyle = "normal";
+    aiOutput.style.color = "#3d003d";
+    aiOutput.innerHTML = "<em>Sedang menganalisis...</em>";
+
+    setTimeout(() => {
+        let jawabanKetemu = false;
+
+        for (let key in botBrain) {
+            if (textTanya.includes(key)) {
+                aiOutput.innerText = botBrain[key];
+                jawabanKetemu = true;
+                break;
+            }
+        }
+
+        if (!jawabanKetemu) {
+            aiOutput.innerText = "Maaf, saya tidak menemukan informasi spesifik tentang itu di encyclopedia saya. Coba ketik kata kunci seperti 'juara', 'top skor', atau 'piala'.";
+        }
+    }, 500);
 }
 
-function validateAuthInput(username, password) {
-    if (username === "" || password === "") {
-        alert("Semua kolom input wajib diisi!");
-        return false;
+btnSubmit.addEventListener('click', prosesPertanyaan);
+
+userInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        prosesPertanyaan();
     }
-    if (password.length < 6) {
-        alert("Password minimal harus terdiri dari 6 karakter!");
-        return false;
+});
+
+
+
+function menanganiLogin(event) {
+    event.preventDefault();
+
+    const usernameInput = document.querySelector('input[type="text"]');
+    const passwordInput = document.querySelector('input[type="password"]');
+
+    const username = usernameInput.value.trim();
+    const password = passwordInput.value.trim();
+
+    if (username === '' || password === '') {
+        alert('Waduh, email/username dan password jangan dikosongin ya!');
+        return;
     }
-    return true;
+
+    alert(`GGMU / YNWA! Login Berhasil.\nSelamat datang kembali, ${username}! ⚽`);
 }
 
-function processAuthentication(username, password) {
-    console.log("Mengirim data login untuk akun: " + username);
-    alert("Login Berhasil! Selamat datang di Premier League Dashboard.");
-}
-
-function clearFormFields(formId) {
-    const form = document.getElementById(formId);
-    if (form) {
-        form.reset();
-    }
-}
+document.addEventListener('DOMContentLoaded', function () {
+    const loginForm = document.querySelector('form');
+    loginForm.addEventListener('submit', menanganiLogin);
+});
