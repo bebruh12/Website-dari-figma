@@ -35,7 +35,7 @@ function prosesPertanyaan() {
         }
 
         if (!jawabanKetemu) {
-            aiOutput.innerText = "Maaf, saya tidak menemukan informasi spesifik tentang itu di encyclopedia saya. Coba ketik kata kunci seperti 'juara', 'top skor', atau 'piala'.";
+            aiOutput.innerText = "Maaf, saya tidak menemukan informasi spesifik tentang itu. Coba ketik kata kunci seperti 'juara', 'top skor', atau 'piala'.";
         }
     }, 500);
 }
@@ -48,4 +48,3 @@ userInput.addEventListener('keypress', function(e) {
         prosesPertanyaan();
     }
 });
-
