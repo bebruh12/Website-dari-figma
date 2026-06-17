@@ -53,37 +53,37 @@ function jalankanAiEncyclopedia() {
     });
 }
 
-function jalankanAiEncyclopedia() {
+function executeLogin(event) {
+    event.preventDefault(); 
+    
+    const usernameInput = document.getElementById('username').value.trim();
+    const passwordInput = document.getElementById('password').value;
+
+    if (validateAuthInput(usernameInput, passwordInput)) {
+        processAuthentication(usernameInput, passwordInput);
+    }
 }
 
-function jalankanLogin() {
-    const formLogin = document.querySelector('form');
-    const inputUser = document.getElementById('username');
-    const inputPass = document.getElementById('password');
-
-    if (!formLogin || !inputUser || !inputPass) return;
-
-    formLogin.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        const username = inputUser.value.trim();
-        const password = inputPass.value.trim();
-
-        if (username === "" || password === "") {
-            alert("Email/Username dan Password tidak boleh kosong!");
-            return;
-        }
-
-        if (username === "admin" && password === "12345") {
-            alert("Login Berhasil! Selamat datang di Premier League Encyclopedia.");
-            window.location.href = "index.html";
-        } else {
-            alert("Username atau Password salah! (Tips: gunakan admin & 12345)");
-        }
-    });
+function validateAuthInput(username, password) {
+    if (username === "" || password === "") {
+        alert("Semua kolom input wajib diisi!");
+        return false;
+    }
+    if (password.length < 6) {
+        alert("Password minimal harus terdiri dari 6 karakter!");
+        return false;
+    }
+    return true;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    jalankanAiEncyclopedia();
-    jalankanLogin();
-});
+function processAuthentication(username, password) {
+    console.log("Mengirim data login untuk akun: " + username);
+    alert("Login Berhasil! Selamat datang di Premier League Dashboard.");
+}
+
+function clearFormFields(formId) {
+    const form = document.getElementById(formId);
+    if (form) {
+        form.reset();
+    }
+}
