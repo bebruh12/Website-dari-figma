@@ -29,14 +29,24 @@
         <div class="row">
             <div class="col-lg-8 col-md-7 mb-4">
                 <h1 class="main-title mb-4">Premier League<br>Encyclopedia</h1>
-                <button class="btn btn-explore mb-5">EXPLORE NOW</button>
-                
-                <div class="chat-section mb-4">
-                    <h3 class="section-label mb-3">Tanya sekarang</h3>
-                    <div class="green-box-input">
-                        <textarea class="form-control blank-textarea" placeholder="Ketik pertanyaanmu di sini..."></textarea>
-                    </div>
-                </div>
+                <button type="button" id="btn-submit" class="btn btn-explore mb-5">EXPLORE NOW</button>
+
+<div class="chat-section mb-4">
+    <h3 class="section-label mb-3">Tanya sekarang</h3>
+    <div class="green-box-input">
+        <textarea id="user-input" class="form-control blank-textarea" placeholder="Ketik pertanyaanmu di sini..."></textarea>
+    </div>
+</div>
+
+<div class="chat-section">
+    <h3 class="section-label mb-3 ai-label d-flex align-items-center">
+        <i class="fa-solid fa-sparkles me-2"></i> EPL Expert Answer
+    </h3>
+    <div class="green-box-output">
+        <p id="ai-output" class="output-placeholder-text">Jawaban analisis AI akan muncul di sini...</p>
+    </div>
+</div>
+
 
                 <div class="chat-section">
                     <h3 class="section-label mb-3 ai-label d-flex align-items-center">
@@ -59,6 +69,6 @@
         </div>
     </div>
 
-</body>
-
+     <script src="script.js"></script>
+   </body>
 </html>
