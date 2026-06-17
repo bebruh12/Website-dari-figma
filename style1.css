@@ -40,6 +40,23 @@ body {
     transform: scale(1.05);
 }
 
+.btn-nav-login {
+    background-color: #00ff87;
+    color: #3d003d;
+    font-size: 0.85rem;
+    border-radius: 20px;
+    padding: 6px 22px;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.btn-nav-login:hover {
+    background-color: #02d171;
+    color: #ffffff;
+}
+
 .trophy-img-container {
     max-width: 80%;
 }
