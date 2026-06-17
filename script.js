@@ -6,45 +6,81 @@ const botBrain = {
     "format": "Premier League diikuti oleh 20 klub, di mana 3 klub terbawah di akhir musim akan terdegradasi ke EFL Championship."
 };
 
-const btnSubmit = document.getElementById('btn-submit');
-const userInput = document.getElementById('user-input');
-const aiOutput = document.getElementById('ai-output');
+function jalankanAiEncyclopedia() {
+    const btnSubmit = document.getElementById('btn-submit');
+    const userInput = document.getElementById('user-input');
+    const aiOutput = document.getElementById('ai-output');
 
-function prosesPertanyaan() {
-    const textTanya = userInput.value.toLowerCase().trim();
-    
-    if (textTanya === "") {
-        aiOutput.innerHTML = "Ketik sesuatu dulu dong di kotak pertanyaan...";
-        aiOutput.style.fontStyle = "italic";
-        return;
+    if (!btnSubmit || !userInput || !aiOutput) return;
+
+    function prosesPertanyaan() {
+        const textTanya = userInput.value.toLowerCase().trim();
+        
+        if (textTanya === "") {
+            aiOutput.innerHTML = "Ketik sesuatu dulu dong di kotak pertanyaan...";
+            aiOutput.style.fontStyle = "italic";
+            return;
+        }
+
+        aiOutput.style.fontStyle = "normal";
+        aiOutput.style.color = "#3d003d";
+        aiOutput.innerHTML = "<em>Sedang menganalisis...</em>";
+
+        setTimeout(() => {
+            let jawabanKetemu = false;
+
+            for (let key in botBrain) {
+                if (textTanya.includes(key)) {
+                    aiOutput.innerText = botBrain[key];
+                    jawabanKetemu = true;
+                    break;
+                }
+            }
+
+            if (!jawabanKetemu) {
+                aiOutput.innerText = "Maaf, saya tidak menemukan informasi spesifik tentang itu. Coba ketik kata kunci seperti 'juara', 'top skor', atau 'piala'.";
+            }
+        }, 500);
     }
 
-    aiOutput.style.fontStyle = "normal";
-    aiOutput.style.color = "#3d003d";
-    aiOutput.innerHTML = "<em>Sedang menganalisis...</em>";
+    btnSubmit.addEventListener('click', prosesPertanyaan);
 
-    setTimeout(() => {
-        let jawabanKetemu = false;
-
-        for (let key in botBrain) {
-            if (textTanya.includes(key)) {
-                aiOutput.innerText = botBrain[key];
-                jawabanKetemu = true;
-                break;
-            }
+    userInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            prosesPertanyaan();
         }
-
-        if (!jawabanKetemu) {
-            aiOutput.innerText = "Maaf, saya tidak menemukan informasi spesifik tentang itu. Coba ketik kata kunci seperti 'juara', 'top skor', atau 'piala'.";
-        }
-    }, 500);
+    });
 }
 
-btnSubmit.addEventListener('click', prosesPertanyaan);
+function jalankanLogin() {
+    const formLogin = document.querySelector('form');
+    const inputUser = document.getElementById('username');
+    const inputPass = document.getElementById('password');
 
-userInput.addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
+    if (!formLogin || !inputUser || !inputPass) return;
+
+    formLogin.addEventListener('submit', function(e) {
         e.preventDefault();
-        prosesPertanyaan();
-    }
+
+        const username = inputUser.value.trim();
+        const password = inputPass.value.trim();
+
+        if (username === "" || password === "") {
+            alert("Email/Username dan Password tidak boleh kosong!");
+            return;
+        }
+
+        if (username === "admin" && password === "12345") {
+            alert("Login Berhasil! Selamat datang di Premier League Encyclopedia.");
+            window.location.href = "index.html";
+        } else {
+            alert("Username atau Password salah! (Tips: gunakan admin & 12345)");
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    jalankanAiEncyclopedia();
+    jalankanLogin();
 });
