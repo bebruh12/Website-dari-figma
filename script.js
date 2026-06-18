@@ -56,22 +56,20 @@ function jalankanAiEncyclopedia() {
 
 function jalankanLogin() {
     const formLogin = document.querySelector('form');
-    
-    // Trik anti-gagal: Cari pakai ID, kalau gak ketemu langsung cari pakai tipe input-nya
+  
     const inputUser = document.getElementById('username') || document.querySelector('input[type="text"]');
     const inputPass = document.getElementById('password') || document.querySelector('input[type="password"]');
 
-    // Jika sedang membuka halaman lain yang tidak ada form-nya, stop di sini
+    
     if (!formLogin) return;
 
-    // Jika form ada tapi inputnya gak ketahuan, munculkan peringatan biar gak mogok diam-diam
     if (!inputUser || !inputPass) {
         alert("Waduh cuy, elemen kotak input Username/Password tidak ditemukan di HTML!");
         return;
     }
 
     formLogin.addEventListener('submit', function(e) {
-        // Kunci utama menahan refresh halaman
+    
         e.preventDefault(); 
 
         const username = inputUser.value.trim();
@@ -84,7 +82,7 @@ function jalankanLogin() {
 
         if (username === "admin" && password === "12345") {
             alert("Login Berhasil! Selamat datang di Premier League Encyclopedia.");
-            window.location.href = "home.html"; 
+            window.location.href = "index.html"; 
         } else {
             alert("Username atau Password salah! (Tips: gunakan admin & 12345)");
         }
